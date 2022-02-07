@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 {
 	private Cell[][] theGrid;
-	public final static int NUM_ROWS = 24;
-	public final static int NUM_COLS = 24;
+	public final static int NUM_ROWS = 5;
+	public final static int NUM_COLS = 5;
 	public GridDemoFrame myParent;
 	public int score;
 	
@@ -20,9 +20,9 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 	{
 		super();
 		resetCells();
-		theGrid[2][2].setMarker("A");
+		//theGrid[2][2].setMarker("A");
 		theGrid[2][2].setDisplayMarker(true);
-		theGrid[3][3].setIsLive(false);
+	//	theGrid[3][3].setIsLive(false);
 		setBackground(Color.BLACK);
 		addMouseListener(this);
 		//parent.addKeyListener(this); // activate this if you wish to listen to the keyboard. 

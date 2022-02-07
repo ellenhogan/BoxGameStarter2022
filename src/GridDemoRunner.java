@@ -8,8 +8,8 @@ public class GridDemoRunner
 		// switch the comme
 
 		// hello
-		StartHereFrame practiceApp = new StartHereFrame();
-//		GridDemoFrame app = new GridDemoFrame();
+		// StartHereFrame practiceApp = new StartHereFrame();
+		GridDemoFrame app = new GridDemoFrame();
 
 	}
 
