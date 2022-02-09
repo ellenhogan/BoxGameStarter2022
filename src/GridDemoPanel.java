@@ -82,14 +82,12 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 	 */
 	public void userClickedCell(int row, int col)
 	{
-
-		makeGameOverDialog();
 		System.out.println("("+row+", "+col+")");
 		if (!theGrid[row][col].isLive())
 			return;
 		theGrid[row][col].cycleColorIDForward();
 		repaint();
-		
+		makeGameOverDialog();
 	}
 	
 	
