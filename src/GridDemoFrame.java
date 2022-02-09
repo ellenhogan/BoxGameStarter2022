@@ -19,6 +19,7 @@ public class GridDemoFrame extends JFrame
 		rulesLabel = new JLabel("Colordoku rules: Click a box to change its color. There may only be one of each color in each row & column.");
 		messageLabel = new JLabel("");
 		Box southPanel = Box.createHorizontalBox();
+
 		
 		this.getContentPane().add(thePanel,BorderLayout.CENTER);
 		this.getContentPane().add(southPanel, BorderLayout.SOUTH);
