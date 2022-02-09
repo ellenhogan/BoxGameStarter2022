@@ -14,7 +14,7 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 	public final static int NUM_ROWS = 5;
 	public final static int NUM_COLS = 5;
 	public GridDemoFrame myParent;
-	public int score;
+	//public int score;
 	
 	public GridDemoPanel(GridDemoFrame parent)
 	{
@@ -38,7 +38,7 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 		for (int r =0; r<NUM_ROWS; r++)
 			for (int c=0; c<NUM_COLS; c++)
 				theGrid[r][c] = new Cell(r,c);
-		score = 0;
+		//score = 0;
 	}
 	
 	public void paintComponent(Graphics g)
@@ -60,8 +60,8 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 		System.out.println("("+row+", "+col+")");
 		if (!theGrid[row][col].isLive())
 			return;
-		score += theGrid[row][col].getColorID();
-		myParent.updateScore(score);
+		/*score += theGrid[row][col].getColorID();
+		myParent.updateScore(score);*/
 		
 		theGrid[row][col].cycleColorIDForward();
 		repaint();

@@ -7,23 +7,23 @@ import javax.swing.JLabel;
 public class GridDemoFrame extends JFrame
 {
 	GridDemoPanel thePanel;
-	JLabel scoreLabel, messageLabel;
+	JLabel rulesLabel, messageLabel;
 	public GridDemoFrame()
 	{
-		super("Grid Demo");
+		super("Colordoku");
 		
-		setSize(600,600+24+16);
+		setSize(700,600+24+16);
 		
 		this.getContentPane().setLayout(new BorderLayout());
 		thePanel = new GridDemoPanel(this);
-		scoreLabel = new JLabel("Score: 0");
+		rulesLabel = new JLabel("Colordoku rules: Click a box to change its color. There may only be one of each color in each row & column.");
 		messageLabel = new JLabel("");
 		Box southPanel = Box.createHorizontalBox();
 		
 		this.getContentPane().add(thePanel,BorderLayout.CENTER);
 		this.getContentPane().add(southPanel, BorderLayout.SOUTH);
 		southPanel.add(Box.createHorizontalStrut(10));
-		southPanel.add(scoreLabel, BorderLayout.SOUTH);
+		southPanel.add(rulesLabel, BorderLayout.SOUTH);
 		southPanel.add(Box.createGlue());
 		southPanel.add(messageLabel, BorderLayout.SOUTH);
 		southPanel.add(Box.createHorizontalStrut(10));
@@ -39,9 +39,9 @@ public class GridDemoFrame extends JFrame
 		messageLabel.repaint();
 	}
 	
-	public void updateScore(int score)
+	/*public void updateScore(int score)
 	{
 		scoreLabel.setText("Score: "+score);
 		scoreLabel.repaint();
-	}
+	}*/
 }
