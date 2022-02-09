@@ -1,13 +1,12 @@
 import java.awt.BorderLayout;
 
-import javax.swing.Box;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.*;
 
 public class GridDemoFrame extends JFrame
 {
 	GridDemoPanel thePanel;
-	JLabel rulesLabel, messageLabel;
+	JTextArea rulesLabel;
+	JLabel messageLabel;
 	public GridDemoFrame()
 	{
 		super("Colordoku");
@@ -16,7 +15,8 @@ public class GridDemoFrame extends JFrame
 		
 		this.getContentPane().setLayout(new BorderLayout());
 		thePanel = new GridDemoPanel(this);
-		rulesLabel = new JLabel("Colordoku rules: Click a box to change its color. There may only be one of each color in each row & column.");
+		rulesLabel = new JTextArea("Colordoku rules: Click a box to change its color. There may only be one of each color in each row & column. \n Any box with a * can not change color");
+		rulesLabel.setEditable(false);
 		messageLabel = new JLabel("");
 		Box southPanel = Box.createHorizontalBox();
 
