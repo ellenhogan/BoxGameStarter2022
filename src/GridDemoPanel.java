@@ -21,7 +21,6 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 		super();
 		resetCells();
 
-
 		//theGrid[2][2].setMarker("A");
 		//theGrid[2][2].setDisplayMarker(true);
 	//	theGrid[3][3].setIsLive(false);
@@ -66,7 +65,6 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 		theGrid[4][4] = new Cell(0,4,4,"",false);
 
 
-		score = 0;
 	}
 	
 	public void paintComponent(Graphics g)
@@ -88,9 +86,12 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 		System.out.println("("+row+", "+col+")");
 		if (!theGrid[row][col].isLive())
 			return;
-		score += theGrid[row][col].getColorID();
-		myParent.updateScore(score);
-		
+		if (theGrid[0][2].getColorID() == 0)
+		{
+			score = score + 5;
+			theGrid[0][2].setMarker("yes");
+		}
+
 		theGrid[row][col].cycleColorIDForward();
 		repaint();
 		

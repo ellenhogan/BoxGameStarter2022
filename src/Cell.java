@@ -13,8 +13,8 @@ public class Cell
 	public static final int CELL_SIZE = 100;
 	private static Font cellFont = new Font("Times New Roman",Font.BOLD,CELL_SIZE*3/4);
 	private static Image[] colorImages; // these will be filled with the images in the following files.
-	private static String[] filenames = {"BlueChip.png", "GreenChip.png", "PurpleChip.png", "RedChip.png", "YellowChip.png"};
-	private static String[] cellColors = {"Blue","Green","Purple","Red","Yellow"};
+	private static String[] filenames = {"BlueChip.png", "GreenChip.png", "PurpleChip.png", "RedChip.png", "YellowChip.png", "WhiteChip.png"};
+	private static String[] cellColors = {"Blue","Green","Purple","Red","Yellow", "White"};
 	
 	private int colorID; // which background color should be displayed?
 	private int x,y; // screen coordinates of the top left corner
