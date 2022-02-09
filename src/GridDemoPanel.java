@@ -82,16 +82,11 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 	 */
 	public void userClickedCell(int row, int col)
 	{
-		
+
+		makeGameOverDialog();
 		System.out.println("("+row+", "+col+")");
 		if (!theGrid[row][col].isLive())
 			return;
-		if (theGrid[0][2].getColorID() == 0)
-		{
-			score = score + 5;
-			theGrid[0][2].setMarker("yes");
-		}
-
 		theGrid[row][col].cycleColorIDForward();
 		repaint();
 		
@@ -105,7 +100,13 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 	 */
 	public void makeGameOverDialog()
 	{
-		JOptionPane.showMessageDialog(this, "Game Over.");
+		if (theGrid[0][2].getColorID() == 0 & theGrid[0][4].getColorID() == 1 & theGrid[1][0].getColorID() == 0
+				& theGrid[1][2].getColorID() == 1 & theGrid[2][1].getColorID() == 0 & theGrid[2][3].getColorID() == 1
+				& theGrid[3][3].getColorID() == 0 & theGrid[3][4].getColorID() == 4 & theGrid[4][0].getColorID() == 1
+				& theGrid[4][1].getColorID() == 4)
+		{
+			JOptionPane.showMessageDialog(this, "Game Over.");
+		}
 		
 	}
 	
