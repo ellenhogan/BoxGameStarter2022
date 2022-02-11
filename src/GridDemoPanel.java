@@ -106,7 +106,7 @@ public class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 				& theGrid[3][3].getColorID() == 0 & theGrid[3][4].getColorID() == 4 & theGrid[4][0].getColorID() == 1
 				& theGrid[4][1].getColorID() == 4)
 		{
-			JOptionPane.showMessageDialog(this, "Congrats! You won!");
+			JOptionPane.showMessageDialog(this, "Game Over.");
 		}
 		
 	}
