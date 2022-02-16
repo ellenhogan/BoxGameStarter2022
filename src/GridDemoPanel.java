@@ -51,6 +51,8 @@ public abstract class GridDemoPanel extends JPanel implements MouseListener, Key
 	 */
 	public void userClickedCell(int row, int col)
 	{
+
+		makeGameOverDialog();
 		System.out.println("("+row+", "+col+")");
 		if (!theGrid[row][col].isLive())
 			return;
@@ -59,7 +61,7 @@ public abstract class GridDemoPanel extends JPanel implements MouseListener, Key
 			theGrid[row][col].cycleColorIDForward();
 		}
 		repaint();
-		makeGameOverDialog();
+		
 	}
 	
 	
