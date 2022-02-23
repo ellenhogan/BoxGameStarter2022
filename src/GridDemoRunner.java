@@ -22,9 +22,9 @@ public class GridDemoRunner
 //		Icon secondIcon = new ImageIcon("");
 		Object[] iconArray = { firstIcon, secondIcon };
 
-		JOptionPane.showOptionDialog(frame, "Ready to play? Select a Level", "Colordoku Menu",
-				JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, iconArray, iconArray[1]);
-
+//		int result = JOptionPane.showOptionDialog(frame, "Ready to play? Select a Level", "Colordoku Menu",
+//				JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, iconArray, iconArray[1]);
+//		System.out.println(result);
 		// by default, we're using the StartHereFrame so you can get used to the Cell class;
 		// switch the comme
 
