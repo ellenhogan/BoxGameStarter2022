@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 public abstract class GridDemoPanel extends JPanel implements MouseListener, KeyListener
 {
-	private Cell[][] theGrid;
+	protected Cell[][] theGrid;
 	public final static int NUM_ROWS = 5;
 	public final static int NUM_COLS = 5;
 	public GridDemoFrame myParent;

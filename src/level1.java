@@ -2,12 +2,18 @@ import javax.swing.*;
 
 public class level1 extends GridDemoPanel
 {
-    private Cell[][] theGrid;
+//    private Cell[][] theGrid;
     public final static int NUM_ROWS = 5;
     public final static int NUM_COLS = 5;
 
+    public level1(GridDemoFrame parent)
+    {
+        super(parent);
+    }
+
     public void resetCells()
     {
+        System.out.println("hello");
         theGrid = new Cell[NUM_ROWS][NUM_COLS];
         theGrid[0][0] = new Cell(4, 0, 0, "*", true);
         theGrid[0][1] = new Cell(3, 0, 1, "*", true);

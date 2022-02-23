@@ -14,7 +14,7 @@ public class GridDemoFrame extends JFrame
 		setSize(700,600+24+16);
 		
 		this.getContentPane().setLayout(new BorderLayout());
-		thePanel = new GridDemoPanel(this);
+		thePanel = new level1(this);
 		rulesLabel = new JTextArea("Colordoku rules: Click a box to change its color. There may only be one of each color in each row & column. \n Any box with a * can not change color");
 		rulesLabel.setEditable(false);
 		messageLabel = new JLabel("");
